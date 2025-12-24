@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+  <title>Neo Red Slot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app">
+    <section class="machine" id="machine">
+
+      <!-- TOP HUD -->
+      <header class="topbar">
+        <div class="meter">
+          <span class="label">TOTAL BET</span>
+          <b class="value" id="totalBet">0</b>
+        </div>
+
+        <div class="meter win">
+          <span class="label">WIN</span>
+          <b class="value" id="winValue">0</b>
+        </div>
+
+        <div class="meter">
+          <span class="label">CREDIT</span>
+          <b class="value" id="creditValue">0</b>
+        </div>
+      </header>
+
+      <!-- BRAND + JACKPOT -->
+      <div class="brandrow">
+        <div class="brand">
+          <span class="brandDot"></span>
+          <span>NEO RED SLOT</span>
+        </div>
+
+        <div class="jackpot">
+          <span class="jLabel">JACKPOT</span>
+          <span class="jValue" id="jackpotValue">0</span>
+        </div>
+      </div>
+
+      <!-- PLAYFIELD -->
+      <section class="playfield">
+        <!-- PAYLINES -->
+        <svg class="paylines" id="paylines" viewBox="0 0 500 300" preserveAspectRatio="none" aria-hidden="true">
+          <!-- 9 líneas -->
+          <polyline data-line="1"  points="0,150 500,150"/>
+          <polyline data-line="2"  points="0,50  500,50"/>
+          <polyline data-line="3"  points="0,250 500,250"/>
+          <polyline data-line="4"  points="0,50  125,150 250,250 375,150 500,50"/>
+          <polyline data-line="5"  points="0,250 125,150 250,50  375,150 500,250"/>
+          <polyline data-line="6"  points="0,150 125,50  250,150 375,250 500,150"/>
+          <polyline data-line="7"  points="0,150 125,250 250,150 375,50  500,150"/>
+          <polyline data-line="8"  points="0,50  125,150 250,50  375,150 500,50"/>
+          <polyline data-line="9"  points="0,250 125,150 250,250 375,150 500,250"/>
+
+          <!-- 15 líneas (extra) -->
+          <polyline data-line="10" points="0,50  125,50  250,150 375,250 500,250"/>
+          <polyline data-line="11" points="0,250 125,250 250,150 375,50  500,50"/>
+          <polyline data-line="12" points="0,150 125,150 250,50  375,150 500,250"/>
+          <polyline data-line="13" points="0,150 125,150 250,250 375,150 500,50"/>
+          <polyline data-line="14" points="0,50  125,150 250,150 375,150 500,250"/>
+          <polyline data-line="15" points="0,250 125,150 250,150 375,150 500,50"/>
+        </svg>
+
+        <!-- REELS -->
+        <div class="reels" id="reels">
+          <div class="reel"><div class="track" id="track1"></div></div>
+          <div class="reel"><div class="track" id="track2"></div></div>
+          <div class="reel"><div class="track" id="track3"></div></div>
+          <div class="reel"><div class="track" id="track4"></div></div>
+          <div class="reel"><div class="track" id="track5"></div></div>
+        </div>
+
+        <div class="message" id="message">LISTO ▶ Presiona SPIN</div>
+      </section>
+
+      <!-- CONTROLS -->
+      <section class="controls">
+        <div class="row">
+          <button class="btn ghost" id="betMinus">BET -</button>
+
+          <div class="pill">
+            <div class="pLabel">BET / LINE</div>
+            <div class="pValue" id="betPerLine">1</div>
+          </div>
+
+          <button class="btn ghost" id="betPlus">BET +</button>
+        </div>
+
+        <div class="row">
+          <button class="btn ghost" id="linesBtn">LINES: <span id="linesValue">9</span></button>
+          <button class="btn main" id="spinBtn">SPIN</button>
+          <button class="btn ghost" id="autoBtn">AUTO</button>
+        </div>
+
+        <div class="row">
+          <button class="btn warn" id="maxBetBtn">MAX BET</button>
+          <button class="btn ghost" id="muteBtn">SOUND</button>
+          <button class="btn good" id="cashoutBtn">CASHOUT</button>
+        </div>
+
+        <div class="row small">
+          <button class="btn ghost" id="resetBtn">RESET</button>
+          <div class="hint">
+            Teclas: <b>Espacio</b>=Spin • <b>A</b>=Auto • <b>M</b>=Mute
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- BONUS MODAL -->
+    <section class="modal" id="bonusModal" aria-hidden="true">
+      <div class="modalCard">
+        <div class="modalTitle">BONUS GAME</div>
+        <div class="modalSub" id="bonusSub">Elige 3 cajas para ganar créditos extra.</div>
+        <div class="bonusGrid" id="bonusGrid"></div>
+        <div class="modalRow">
+          <button class="btn main" id="bonusDoneBtn" disabled>COBRAR BONUS</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
